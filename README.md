@@ -1,6 +1,8 @@
 # HostPanic
 
-Hacking tool to seek host header injections and escalate it with other kind of vulns like web cache poissoning
+Hacking tool to seek host header injections and escalate it with other kind of vulns like web cache poissoning.
+
+Feel free to contact me via Twitter (https://twitter.com/mr_medi_) for any suggestion or any help using this tool.
 
 ## Installation
 
@@ -57,3 +59,4 @@ This work is inspired by the following excellent researches:
 * **Export results in a JSON file**
 * **Let the users to use his own list of payloads in the host header**
 * **Comment and refactor the code**
+
