@@ -26,7 +26,7 @@ The script will do a GET request with different host headers, for example a Port
 If this domain generate any link to construct the absolute URL and uses that header without sanitizes it you, then you can try to poisson that request with the keyed input as the host header and perform a responsible DOS attack to let the users without access that link.
 
 In the next image you can see the sucesful result of a port injection in the host header in Google:
-![Index page](https://github.com/mr-medi/hostpanic/assets/hostpanic-1.jpg?raw=true)
+![Index page](https://github.com/mr-medi/hostpanic/assets/hostpanic-1.png?raw=true)
 
 ## USAGE:
 ```
