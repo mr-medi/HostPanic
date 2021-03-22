@@ -20,6 +20,7 @@ def get_request(url, path, port, verbose, headers=[], tags=[]):
             if name in userHeader:
                 foundHeader = True
                 u_header = userHeader.split(':')
+
                 if len(u_header) >= 3:
                     DEF.append(u_header[0] + ": " + u_header[1]+":"+u_header[2])
                 else:
@@ -28,6 +29,12 @@ def get_request(url, path, port, verbose, headers=[], tags=[]):
         # JUST A CHECK TO NOT REPEAT HTTP HEADERS
         if not foundHeader:
             DEF.append(h)
+
+        for i in headers:
+            foundHeader = True
+            u_header = i.split(':')
+            if u_header[0] == "Cookie":
+                cookie = u_header[1]
 
     # BUILD RAW HTTP REQUEST
     host = ""
@@ -94,7 +101,8 @@ def get_request(url, path, port, verbose, headers=[], tags=[]):
             parse = soup.prettify()
             html = soup.prettify()
 
-
+            #if verbose:
+            #    print(html)
             # GET ALL HOST HEADER INJECTION IN RESPONSE
             if host not in url:
                 positions = list(findall(host, parse))
@@ -131,6 +139,7 @@ def get_request(url, path, port, verbose, headers=[], tags=[]):
             if len(str(rawHeadersResponse).split("\r\n")[0]) > 1:
                 httpCode = str(rawHeadersResponse).split("\r\n")[0].split(" ")[1]
             print(style.GREEN + str(httpCode) +style.RESET)
+            print(html)
 
             for header in headersRaw:
                 name = ""
@@ -160,7 +169,6 @@ def get_request(url, path, port, verbose, headers=[], tags=[]):
 
 # BUILD HTTP REQUEST
 def doRequest(method, url, path, port, verbose, headers=[]):
-    cookie = "_lab=46%7cMCwCFE3mW1jkDkrJIQLmC%2f2OS7KAsF15AhR8%2bJNqw7maeB2xgKpOpoEJeYwcfkHo%2bRo84lgszJhY7j5BH5Bo4eAUwarF4ihMo%2fUX0Y68OKiwESQnJB7rDOkK4Kp7OGMTFDJ269CVQDwwQ8gkIjnSdj0rtxKZAoGHMnuvqa8ylAXu9Nw%3d; session=wZ9kWvz7TjKbqhWf4kHxWgRp8tHM66B3"
     headers2 = ['Pragma: no-cache', 'Accept: */*', 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0', 'Connection: close', 'Host: '+url]
     DEF = []
 
