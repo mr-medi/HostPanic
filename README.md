@@ -1,6 +1,8 @@
 # HostPanic
 
-Hacking tool to seek host header injections and escalate it with other kind of vulns like web cache poissoning
+Hacking tool to seek host header injections and escalate it with other kind of vulns like web cache poissoning.
+
+Feel free to contact me via Twitter ([https://twitter.com/mr_medi_](https://twitter.com/mr_medi_) ) for any suggestion or any help using this tool.
 
 ## Installation
 
@@ -22,11 +24,12 @@ The first thing is to enter a URL or domain, with this data the script will gene
 Let´s take an example:
 
 I enter the url "https://www.google.com/" as seen in the previous example.
-The script will do a GET request with different host headers, for example a Port Injection like 'Host:22'.
-If this domain generate any link to construct the absolute URL and uses that header without sanitizes it you, then you can try to poisson that request with the keyed input as the host header and perform a responsible DOS attack to let the users without access that link.
+
+The script will do a GET request with different host headers, for example a Port Injection like the following HTTP Header 'Host: domain:22'.
+If this domain generate any link to construct the absolute URL and uses that header without sanitizes it you, then you can try to poisson that request with the reflected input as the host header and perform a responsible DOS attack to let the users without access that link.
 
 In the next image you can see the sucesful result of a port injection in the host header in Google:
-![Index page](https://github.com/mr-medi/hostpanic/assets/hostpanic-1.png?raw=true)
+![Index page](https://github.com/mr-medi/HostPanic/blob/master/assets/hostpanic-1.jpg?raw=true)
 
 ## USAGE:
 ```
@@ -53,7 +56,9 @@ This work is inspired by the following excellent researches:
 
 ## TODO
 
+* **Test for Web Cache Poissoning attacks and try to escalate all the host header injections found**
 * **Create a client to test for DNS pingbacks**
 * **Export results in a JSON file**
 * **Let the users to use his own list of payloads in the host header**
 * **Comment and refactor the code**
+
