@@ -69,6 +69,7 @@ def attack(URL, path, domain, verbose, ips, cookie):
         get_request(URL, path, 443, verbose, ['Host: '+ domain, 'X-Forwarded-Host: evil.com', "Cookie: " + cookie])
 
 try:
+    rawCookies = ""
     args = parse_args()
     isPath = False
     verbose =  False
