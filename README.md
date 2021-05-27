@@ -2,7 +2,6 @@
 
 Hacking tool to seek host header injections and escalate it with other kind of vulns like web cache poissoning.
 
-Feel free to contact me via Twitter ([https://twitter.com/mr_medi_](https://twitter.com/mr_medi_) ) for any suggestion or any help using this tool.
 
 ## Installation
 
@@ -52,7 +51,6 @@ python3 main.py -u <URL> -r
 This work is inspired by the following excellent researches:
 
 * **James Kettle**, Practical HTTP Host header attacks (https://www.skeletonscribe.net/2013/05/practical-http-host-header-attacks.html)
-* **Oxd0m7**, for sharing their knowledge and ideas on development
 
 ## TODO
 
