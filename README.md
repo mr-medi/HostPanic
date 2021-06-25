@@ -2,7 +2,7 @@
 
 Hacking tool to seek host header injections and escalate it with other kind of vulns like web cache poissoning.
 
-Feel free to contact me via Twitter ([a link](https://twitter.com/mr_medi_) ) for any suggestion or any help using this tool.
+Feel free to contact me via Twitter ([@mr_medi_](https://twitter.com/mr_medi_) ) for any suggestion or any help using this tool.
 
 
 ## Installation
