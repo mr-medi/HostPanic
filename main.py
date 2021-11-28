@@ -84,7 +84,7 @@ try:
     # Check IP Range in Host Header
     if args.range:
         rangeIp = args.range
-        ipPattern = "192.168.0."
+        ipPattern = args.range
 
         for i in range(1, 255):
             ip = ipPattern + str(i)
