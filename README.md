@@ -4,11 +4,19 @@ Hacking tool to seek host header injections and escalate it with other kind of v
 
 Feel free to contact me via Twitter ([@mr_medi_](https://twitter.com/mr_medi_) ) for any suggestion or any help using this tool.
 
+# Attack Example
+
+In the next Youtube video I made you can check how to perform a Routing Based SSRF based on a Portswigger Lab using my Tool.
+I will share more examples soon about how to approach it.
+
+Click to see it:
+
+[![Click to see how to use my Tool to perform Routing Based SSRF on a Portswigger lab](https://img.youtube.com/vi/XHI_Ka9CGP4/0.jpg)](https://www.youtube.com/watch?v=XHI_Ka9CGP4)
 
 ## Installation
 
 ```bash
-#Clone the repo
+# Clone the repo
 git clone https://github.com/mr-medi/HostPanic.git
 ```
 
@@ -40,8 +48,11 @@ python3 main.py -u <URL>
 [*] NORMAL MODE + VERBOSE (Print HTTP headers of response)
 python3 main.py -u <URL> -v
 
-[*] NORMAL MODE + TEST LOCAL IP RANGE IN HOST HEADER
-python3 main.py -u <URL> -r
+[*] NORMAL MODE + TEST LOCAL IP RANGE IN HOST HEADER (Following example will do 254 request from 192.168.0.1 to 192.168.0.255)
+python3 main.py -u <URL> -r "192.168.0."
+
+[*] NORMAL MODE + ADD COOKIES TO EACH REQUEST
+python3 main.py -u <URL> -c "Mycookie1=1;MyEvilcookie2=2"
 ```
 
 ## Authors
