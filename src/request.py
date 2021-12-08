@@ -1,4 +1,3 @@
-import validators
 from urllib.parse import urlparse
 import socket
 import ssl
