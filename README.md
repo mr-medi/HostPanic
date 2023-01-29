@@ -2,11 +2,16 @@
 
 Hacking tool to seek host header injections and escalate it with other kind of vulns like web cache poissoning.
 
-Feel free to contact me ([@medi_0ne](https://twitter.com/medi_0ne) ) for any suggestion or any help using this tool.
+Feel free to contact me ([@medi_0ne](https://twitter.com/medi_0ne) ) for any suggestion using this tool.
 
 # Attack Example
 
-I will share some examples soon about how to approach it.
+In the next Youtube video you can check how to perform a Routing Based SSRF based on a Portswigger Lab using my Tool.
+I will share more examples soon about how to approach it.
+
+Click to see it:
+
+[![Click to see how to use my Tool to perform Routing Based SSRF on a Portswigger lab](https://img.youtube.com/vi/XHI_Ka9CGP4/0.jpg)](https://www.youtube.com/watch?v=XHI_Ka9CGP4)
 
 
 ## Installation
